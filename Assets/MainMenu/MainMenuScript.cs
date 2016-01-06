@@ -8,4 +8,13 @@ public class MainMenuScript : MonoBehaviour {
     {
         SceneManager.LoadScene("RainDropScene");
     }
+    public void Quit()
+    {
+        Application.Quit();
+    }
+
+    public void StartMemoryLevel()
+    {
+        SceneManager.LoadScene("MemoryScene");
+    }
 }

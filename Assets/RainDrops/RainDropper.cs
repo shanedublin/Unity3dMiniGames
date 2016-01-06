@@ -47,7 +47,6 @@ public class RainDropper : MonoBehaviour
             drop.transform.position = new Vector3(randX, yStart);
         }
 
-
     }
 
     public void CaughtRainDrop()
