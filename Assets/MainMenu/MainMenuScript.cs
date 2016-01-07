@@ -17,4 +17,8 @@ public class MainMenuScript : MonoBehaviour {
     {
         SceneManager.LoadScene("MemoryScene");
     }
+    public void StartDuckLevel()
+    {
+        SceneManager.LoadScene("DuckScene");
+    }
 }
