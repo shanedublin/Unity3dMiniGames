@@ -21,4 +21,8 @@ public class MainMenuScript : MonoBehaviour {
     {
         SceneManager.LoadScene("DuckScene");
     }
+    public void StartPeaLevel()
+    {
+        SceneManager.LoadScene("PeaScene");
+    }
 }

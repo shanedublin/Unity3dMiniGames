@@ -13,3 +13,5 @@ EditorBuildSettings:
     path: Assets/Memory/MemoryScene.unity
   - enabled: 1
     path: Assets/DuckInAStream/DuckScene.unity
+  - enabled: 1
+    path: Assets/PeaPeril/PeaScene.unity

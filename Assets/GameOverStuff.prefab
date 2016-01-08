@@ -129,6 +129,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 224: {fileID: 22419164}
+  - 114: {fileID: 11410014}
   m_Layer: 5
   m_Name: GameOverStuff
   m_TagString: Untagged
@@ -136,6 +137,17 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!114 &11410014
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 179672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c44937cf651c31743aca9009a2f4aed6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11442740
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -388,7 +400,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 11410014}
         m_MethodName: PlayAgain
         m_Mode: 1
         m_Arguments:
@@ -440,7 +452,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 11410014}
         m_MethodName: GoToMainMenu
         m_Mode: 1
         m_Arguments:
