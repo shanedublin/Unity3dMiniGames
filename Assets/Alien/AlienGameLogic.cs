@@ -6,7 +6,12 @@ public class AlienGameLogic : MonoBehaviour
 
     public int wave = 1;
     public int numEnemies = 4;
-
+    [SerializeField]
+    AudioClip[] animalDeathSounds;
+    [SerializeField]
+    AudioSource audioSource;
+    [SerializeField]
+    Text highScoreText;
     [SerializeField]
     Text pointsText;
     [SerializeField]
@@ -69,29 +74,30 @@ public class AlienGameLogic : MonoBehaviour
 
             }
         }
-        if (Input.GetMouseButtonDown(1))
-        {
-            if (points >= (numTurrets + 1 * 10))
-            {
-                points -= (numTurrets + 1 * 10);
-                GameObject turr = Instantiate(turret);
-                Vector3 MousePos = Input.mousePosition;
-                Vector3 pos = Camera.main.ScreenToWorldPoint(MousePos);
-                Debug.Log(pos);
-                pos.z = 0;
-                turret.transform.position = pos;
-                TurretScript ts = turr.GetComponent<TurretScript>();
-                numTurrets++;
-                AlienDeath(0);
-            }
-        }
+        //if (Input.GetMouseButtonDown(1))
+        //{
+        //    if (points >= (numTurrets + 1 * 10))
+        //    {
+        //        points -= (numTurrets + 1 * 10);
+        //        GameObject turr = Instantiate(turret);
+        //        Vector3 MousePos = Input.mousePosition;
+        //        Vector3 pos = Camera.main.ScreenToWorldPoint(MousePos);
+        //        Debug.Log(pos);
+        //        pos.z = 0;
+        //        turret.transform.position = pos;
+        //        TurretScript ts = turr.GetComponent<TurretScript>();
+        //        numTurrets++;
+        //        AlienDeath(0);
+        //    }
+        //}
     }
 
 
     public static void AlienDeath(float points)
     {
         instance.points += points;
-        instance.pointsText.text = "$ " + instance.points.ToString(); 
+        instance.pointsText.text = "$ " + instance.points.ToString();
+        instance.audioSource.PlayOneShot(instance.animalDeathSounds[Random.Range(0, instance.animalDeathSounds.Length)]);
     }
 
     public void FixedUpdate()
@@ -113,7 +119,7 @@ public class AlienGameLogic : MonoBehaviour
 
 
 
-        yield return new WaitForSeconds(alienSpawnRate);
+        yield return new WaitForSeconds(alienSpawnRate - ((wave - 1) * .1f));
         if(numEnemies > 1)
         {
             numEnemies--;
@@ -133,5 +139,15 @@ public class AlienGameLogic : MonoBehaviour
     {
         GameOverStuff.SetActive(true);
         Time.timeScale = 0;
+
+        float highScore = PlayerPrefs.GetFloat("DuckHighScore");
+        if (points > highScore)
+        {
+            highScore = points;
+            PlayerPrefs.SetFloat("DuckHighScore", points);
+        }
+
+        highScoreText.text = "HighScore: " + highScore;
+
     }
 }

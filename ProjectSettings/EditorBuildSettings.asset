@@ -15,3 +15,5 @@ EditorBuildSettings:
     path: Assets/DuckInAStream/DuckScene.unity
   - enabled: 1
     path: Assets/PeaPeril/PeaScene.unity
+  - enabled: 1
+    path: Assets/Alien/AlienTD.unity

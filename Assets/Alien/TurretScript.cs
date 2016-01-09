@@ -5,6 +5,9 @@ public class TurretScript : MonoBehaviour
 {
 
     [SerializeField]
+    AudioSource audioSource;
+
+    [SerializeField]
     Rigidbody2D body;
 
     [SerializeField]
@@ -12,6 +15,9 @@ public class TurretScript : MonoBehaviour
 
     [SerializeField]
     GameObject smokeTrail;
+
+    [SerializeField]
+    GameObject rangeIndicator;
     public List<AlienScript> targets = new List<AlienScript>();
     public int level;
     public LayerMask targetLayers;
@@ -53,6 +59,8 @@ public class TurretScript : MonoBehaviour
 
         if(fireTimer <= 0)
         {
+            rangeIndicator.SetActive(true);
+            
             foreach(AlienScript alien in targets)
             {
                 if(alien == null)
@@ -85,6 +93,8 @@ public class TurretScript : MonoBehaviour
         createSmokeTrail();
         fireTimer = 1/fireRate;
         alien.Damage(damage);
+        rangeIndicator.SetActive(false);
+        audioSource.Play();
 
     }
 

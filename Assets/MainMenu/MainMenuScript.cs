@@ -25,4 +25,8 @@ public class MainMenuScript : MonoBehaviour {
     {
         SceneManager.LoadScene("PeaScene");
     }
+    public void StartAlienLevel() {
+        SceneManager.LoadScene("AlienTD");
+    }
+
 }
