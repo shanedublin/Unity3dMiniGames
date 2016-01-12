@@ -35,6 +35,7 @@ public class PeaGameLogic : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        Time.timeScale = 1;
         StartCoroutine(SpawnPeaBody());
         StartCoroutine(SpawnPeaPod());
         StartCoroutine(SpawnPlate());

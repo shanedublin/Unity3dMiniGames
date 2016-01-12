@@ -96,7 +96,7 @@ public class AlienGameLogic : MonoBehaviour
     public static void AlienDeath(float points)
     {
         instance.points += points;
-        instance.pointsText.text = "$ " + instance.points.ToString();
+        instance.pointsText.text =  instance.points.ToString();
         instance.audioSource.PlayOneShot(instance.animalDeathSounds[Random.Range(0, instance.animalDeathSounds.Length)]);
     }
 

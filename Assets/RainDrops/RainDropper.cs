@@ -18,7 +18,7 @@ public class RainDropper : MonoBehaviour
     [SerializeField]    Text HighScoreText;
     public int score = 0;
 
-    public float spawnInterval = .5f;
+    public float spawnInterval = 1f;
     float timer;
 
     [SerializeField]
@@ -41,7 +41,7 @@ public class RainDropper : MonoBehaviour
         timer -= Time.fixedDeltaTime;
 
         if (timer <= 0) {
-            timer = spawnInterval;
+            timer = 1/(spawnInterval + score/50f);
             GameObject drop = Instantiate(RainDrop);
             float randX = Random.Range(-deltaX, deltaX);
             drop.transform.position = new Vector3(randX, yStart);

@@ -28,5 +28,8 @@ public class MainMenuScript : MonoBehaviour {
     public void StartAlienLevel() {
         SceneManager.LoadScene("AlienTD");
     }
-
+    public void StartSkeetLevel()
+    {
+        SceneManager.LoadScene("SkeetScene");
+    }
 }

@@ -1062,7 +1062,7 @@ MonoBehaviour:
   text: {fileID: 1911005382}
   HighScoreText: {fileID: 1345782309}
   score: 0
-  spawnInterval: 1
+  spawnInterval: 0.5
   RainDrop: {fileID: 197874, guid: e60eff13ef2b80645948b75eee970c3f, type: 2}
 --- !u!4 &1719492270
 Transform:

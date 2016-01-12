@@ -17,3 +17,5 @@ EditorBuildSettings:
     path: Assets/PeaPeril/PeaScene.unity
   - enabled: 1
     path: Assets/Alien/AlienTD.unity
+  - enabled: 1
+    path: Assets/SkeetShooter/SkeetScene.unity
