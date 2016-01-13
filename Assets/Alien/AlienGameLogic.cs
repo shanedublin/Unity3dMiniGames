@@ -140,11 +140,11 @@ public class AlienGameLogic : MonoBehaviour
         GameOverStuff.SetActive(true);
         Time.timeScale = 0;
 
-        float highScore = PlayerPrefs.GetFloat("DuckHighScore");
+        float highScore = PlayerPrefs.GetFloat("AlienHighScore");
         if (points > highScore)
         {
             highScore = points;
-            PlayerPrefs.SetFloat("DuckHighScore", points);
+            PlayerPrefs.SetFloat("AlienHighScore", points);
         }
 
         highScoreText.text = "HighScore: " + highScore;

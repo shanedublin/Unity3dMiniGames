@@ -19,6 +19,9 @@ public abstract class MainGameLogic : MonoBehaviour {
 
     [SerializeField]
     protected bool gameOver = false;
+
+    [SerializeField]
+    protected float score;
 	// Use this for initialization
 	public virtual void Start () {
         Time.timeScale = 1;
@@ -35,6 +38,7 @@ public abstract class MainGameLogic : MonoBehaviour {
     {
         GameOverStuff.SetActive(true);
         UpdateHighScore();
+        gameOver = true;
         
     }
 

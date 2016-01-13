@@ -32,4 +32,8 @@ public class MainMenuScript : MonoBehaviour {
     {
         SceneManager.LoadScene("SkeetScene");
     }
+    public void StartBubbleScene()
+    {
+        SceneManager.LoadScene("BubleVampireScene");
+    }
 }

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DuckLogicScript : MonoBehaviour {
+public class BubleSpawnerScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
