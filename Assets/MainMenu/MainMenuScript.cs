@@ -36,4 +36,9 @@ public class MainMenuScript : MonoBehaviour {
     {
         SceneManager.LoadScene("BubleVampireScene");
     }
+
+    public void StartStackingScene()
+    {
+        SceneManager.LoadScene("StackingScene");
+    }
 }

@@ -21,3 +21,5 @@ EditorBuildSettings:
     path: Assets/SkeetShooter/SkeetScene.unity
   - enabled: 1
     path: Assets/BubleVampire/BubleVampireScene.unity
+  - enabled: 1
+    path: Assets/StackingBlocks/StackingScene.unity
